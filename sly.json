@@ -1,0 +1,25 @@
+{
+  "$schema": "https://sly-cli.fly.dev/registry/config.json",
+  "libraries": [
+    {
+      "name": "icons",
+      "directory": "./other/svg/icons",
+      "postinstall": [
+        "pnpm",
+        "run",
+        "build:icons"
+      ],
+      "transformers": []
+    },
+    {
+      "name": "imgs",
+      "directory": "./other/svg/imgs",
+      "postinstall": [
+        "pnpm",
+        "run",
+        "build:icons"
+      ],
+      "transformers": []
+    }
+  ]
+}

@@ -2,32 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+@layer body {
+    * {
+        @apply my-0 p-0;
+    }
+
+    .wrapper {
+        @apply mx-auto container px-4 sm:px-6 lg:px-8;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@layer components {
+    /*.test-flex {*/
+    /*    display: flex;*/
+    /*    justify-content: center;*/
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+    /*}*/
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    /*.test-flex-item {*/
+    /*    width: 55px;*/
+    /*    flex-basis: 55px;*/
+    /*    flex-grow: 0;*/
+    /*}*/
+
+    /*.flexwrap {*/
+    /*    display: flex;*/
+    /*    justify-content: center;*/
+    /*    height: 100px;*/
+    /*    background-color: brown;*/
+    /*}*/
+    /*.flex1 {*/
+    /*    width: 25%;*/
+    /*    background-color: blue;*/
+    /*    height: 100%;*/
+    /*}*/
+    /*.flex2 {*/
+    /*    width: 25%;*/
+    /*    background-color: green;*/
+    /*    height: 100%;*/
+    /*}*/
 }
