@@ -1,5 +1,5 @@
+import { buttonType } from '@/types/buttonTypes';
 import { ButtonHTMLAttributes, FC, HTMLProps, JSX } from 'react';
-import { buttonType } from '@/constants';
 
 export type ButtonThemeType = {
   primary: HTMLProps<HTMLElement>['className'];
@@ -10,7 +10,7 @@ export type customButtonType = {
   theme?: buttonType.primary | buttonType.secondary | buttonType.ghost;
   disabled?: boolean;
   onClick?: () => void;
-  children: JSX.Element;
+  children: string;
   className?: HTMLProps<HTMLElement>['className'];
   isLoading?: boolean;
   props?: ButtonHTMLAttributes<HTMLButtonElement>;
@@ -32,6 +32,7 @@ export const CustomButton: FC<customButtonType> = ({
       }`}
       disabled={disabled}
       onClick={onClick}
+      type = 'button'
       {...props}
     >
       {isLoading && (
@@ -53,7 +54,7 @@ export const CustomButton: FC<customButtonType> = ({
           />
         </svg>
       )}
-      {children}
+      <p>{children}</p>
     </button>
   );
 };
